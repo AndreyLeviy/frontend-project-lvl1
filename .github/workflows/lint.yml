@@ -2,10 +2,12 @@ name: lint
 
 on:
   push:
+    branches:
+      - '**'
   
 
 jobs:
-  test:
+  build:
 
     runs-on: ubuntu-latest
 
