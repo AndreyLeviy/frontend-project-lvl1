@@ -4,9 +4,9 @@
 [![Lint](https://github.com/AndreyLeviy/frontend-project-lvl1/workflows/lint/badge.svg)](https://github.com/AndreyLeviy/frontend-project-lvl1/actions)
 
 ## Игра: "Проверка на чётность"
-Суть игры заключаеся в том, что пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
-Игра запускается командой $brain-even
-<a href="https://asciinema.org/a/385604" target="_blank"><img src="https://asciinema.org/a/385604.svg" /></a>
+<p>Суть игры заключаеся в том, что пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.</p>
+<p>Игра запускается командой $brain-even</p>
+<script id="asciicast-XVPdZKqwDdjRX38t3ntA8r6QD" src="https://asciinema.org/a/XVPdZKqwDdjRX38t3ntA8r6QD.js" async></script>
 [![asciicast](https://asciinema.org/a/385600.svg)](https://asciinema.org/a/385600)
 
 ## Игра: "Калькулятор"
