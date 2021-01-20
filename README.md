@@ -5,7 +5,7 @@
 
 ## Игра: "Проверка на чётность"
 <p>Суть игры заключаеся в том, что пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.</p>
-<p>Игра запускается командой $brain-even</p>
+<p>Игра запускается командой <b>$brain-even</b></p>
 <script id="asciicast-XVPdZKqwDdjRX38t3ntA8r6QD" src="https://asciinema.org/a/XVPdZKqwDdjRX38t3ntA8r6QD.js" async></script>
 [![asciicast](https://asciinema.org/a/385600.svg)](https://asciinema.org/a/385600)
 
