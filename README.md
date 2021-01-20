@@ -6,6 +6,7 @@
 ## Игра: "Проверка на чётность"
 Суть игры заключаеся в том, что пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
 Игра запускается командой $brain-even
+<a href="https://asciinema.org/a/385604" target="_blank"><img src="https://asciinema.org/a/385604.svg" /></a>
 [![asciicast](https://asciinema.org/a/385600.svg)](https://asciinema.org/a/385600)
 
 ## Игра: "Калькулятор"
