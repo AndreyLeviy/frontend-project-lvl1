@@ -31,6 +31,7 @@ const doGcd = () => {
       return j;
     };
     const correctAnswer = getCorrectAnswer(randomInt1, randomInt2);
+    // eslint-disable-next-line no-eval
     if (eval(userAnswer) === correctAnswer) {
       console.log('Correct!');
       i += 1;
