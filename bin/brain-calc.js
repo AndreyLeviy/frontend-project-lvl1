@@ -36,7 +36,7 @@ const doCalc = () => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}//!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 doCalc();
