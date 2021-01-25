@@ -9,12 +9,6 @@ export const greeting = () => {
   userName = name;
 };
 
-/* export const getUserAnswer = () => {
-const answer = readlineSync.question('Your answer: ');
-userAnswer = answer;
-};
-*/
-
 export const winMessage = () => console.log(`Congratulations, ${userName}!`);
 export const loseMessage = () => {
   console.log(`Let's try again, ${userName}!`);
