@@ -3,18 +3,9 @@ import { getRandomNumber } from '../index.js';
 export const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (one, two) => {
-  let minNum;
-  let maxNum;
-  if (one < two) {
-    minNum = one;
-    maxNum = two;
-  } else {
-    minNum = two;
-    maxNum = one;
-  }
-  let j = minNum;
+  let j = (one < two) ? one : two;
   for (; j > 0; j -= 1) {
-    if (maxNum % j === 0 && minNum % j === 0) {
+    if (one % j === 0 && two % j === 0) {
       return j;
     }
   }
