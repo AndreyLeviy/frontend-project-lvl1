@@ -2,7 +2,30 @@ import { getRandomNumber } from '../index.js';
 
 export const description = 'Find the greatest common divisor of given numbers.';
 
-const getCorrectAnswer = (one, two) => {
+const getGcd = (one, two) => {
+  let minNum;
+  let maxNum;
+  if (one < two) {
+    minNum = one;
+    maxNum = two;
+  } else {
+    minNum = two;
+    maxNum = one;
+  }
+  let j = minNum;
+  for (; j > 0; j -= 1) {
+    if (maxNum % j === 0 && minNum % j === 0) {
+      return j;
+    }
+  }
+  return j;
+};
+
+/*
+
+Code-climate пожаловался на когнитивную сложность (6 из 5 допустимых);
+
+const getGcd = (one, two) => {
   const minNum = (one < two) ? one : two;
   const maxNum = (one > two) ? one : two;
   let j = minNum;
@@ -13,6 +36,7 @@ const getCorrectAnswer = (one, two) => {
   }
   return j;
 };
+*/
 
 const getAnswersAndQuestions = () => {
   const result = [];
@@ -20,7 +44,7 @@ const getAnswersAndQuestions = () => {
     const randomNum1 = getRandomNumber(1, 26); // целое случайное число от //1 до 25;
     const randomNum2 = getRandomNumber(1, 26); // целое случайное число от //1 до 25;
     const question = `${randomNum1} ${randomNum2}`;
-    const correctAnswer = getCorrectAnswer(randomNum1, randomNum2);
+    const correctAnswer = getGcd(randomNum1, randomNum2);
     result[i] = [question, correctAnswer.toString()];
   }
   return result;
