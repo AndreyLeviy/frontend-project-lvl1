@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import doGcd from '../src/games/gcd.js';
+import { description, answersAndQuestions } from '../src/games/gcd.js';
+import doGame from '../src/index.js';
 
-doGcd();
+doGame(description, answersAndQuestions);

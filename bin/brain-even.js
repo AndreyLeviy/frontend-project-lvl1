@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import doGame from '../src/games/even.js';
+import { description, answersAndQuestions } from '../src/games/even.js';
+import doGame from '../src/index.js';
 
-doGame();
+doGame(description, answersAndQuestions);
