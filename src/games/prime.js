@@ -1,9 +1,9 @@
 import { getRandomNumber } from '../index.js';
 
-export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getCorrectAnswer = (a) => {
-  for (let j = 2; j < a; j += 1) {
+  for (let j = 2; j <= Math.sqrt(a); j += 1) {
     if (a % j === 0) {
       return 'no';
     }
@@ -21,4 +21,5 @@ const getAnswersAndQuestions = () => {
   return result;
 };
 
-export const answersAndQuestions = getAnswersAndQuestions();
+const answersAndQuestions = getAnswersAndQuestions();
+export default { description, answersAndQuestions };

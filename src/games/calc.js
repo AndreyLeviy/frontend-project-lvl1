@@ -1,6 +1,6 @@
 import { getRandomNumber } from '../index.js';
 
-export const description = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getRandomSign = () => {
   const signs = ['+', '-', '*'];
@@ -11,8 +11,8 @@ const getRandomSign = () => {
 const getAnswersAndQuestions = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
-    const randomNum1 = getRandomNumber(1, 10); // целое случайное число от //1 до 9;
-    const randomNum2 = getRandomNumber(1, 16); // целое случайное число от //1 до 15;
+    const randomNum1 = getRandomNumber(1, 10);
+    const randomNum2 = getRandomNumber(1, 16);
     const sign = getRandomSign();
     const question = `${randomNum1} ${sign} ${randomNum2}`;
     let correctAnswer;
@@ -28,4 +28,5 @@ const getAnswersAndQuestions = () => {
   return result;
 };
 
-export const answersAndQuestions = getAnswersAndQuestions();
+const answersAndQuestions = getAnswersAndQuestions();
+export default { description, answersAndQuestions };

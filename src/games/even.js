@@ -1,6 +1,6 @@
 import { getRandomNumber } from '../index.js';
 
-export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getAnswersAndQuestions = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
@@ -11,4 +11,5 @@ const getAnswersAndQuestions = () => {
   return result;
 };
 
-export const answersAndQuestions = getAnswersAndQuestions();
+const answersAndQuestions = getAnswersAndQuestions();
+export default { description, answersAndQuestions };

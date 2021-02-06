@@ -14,10 +14,8 @@ const getProgression = (firstElement, step) => {
 const getAnswersAndQuestions = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
-    const firstElementOfProgression = getRandomNumber(1, 11);
-    const progressionStep = getRandomNumber(2, 10);
     const randomElemOfProgression = getRandomNumber(0, 10);
-    const progression = getProgression(firstElementOfProgression, progressionStep);
+    const progression = getProgression(getRandomNumber(1, 11), getRandomNumber(2, 10));
     const correctAnswer = progression[randomElemOfProgression];
     progression[randomElemOfProgression] = '..';
     const question = progression.join(' ');
@@ -26,4 +24,5 @@ const getAnswersAndQuestions = () => {
   return result;
 };
 
-export const answersAndQuestions = getAnswersAndQuestions();
+const answersAndQuestions = getAnswersAndQuestions();
+export default { description, answersAndQuestions };

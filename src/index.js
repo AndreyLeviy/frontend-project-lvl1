@@ -6,7 +6,7 @@ export const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (maximum - minimum)) + minimum;
 };
 
-const doGame = (description, answersAndQuestions) => {
+const doGame = ({ description, answersAndQuestions }) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
