@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../index.js';
+import { getRandomNumber, amountRounds } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
@@ -10,23 +10,22 @@ const getRandomSign = () => {
 
 const getAnswersAndQuestions = () => {
   const result = [];
-  for (let i = 0; i < 3; i += 1) {
-    const randomNum1 = getRandomNumber(1, 10);
-    const randomNum2 = getRandomNumber(1, 16);
+  for (let i = 0; i < amountRounds; i += 1) {
+    const firstNumber = getRandomNumber(1, 10);
+    const secondNumber = getRandomNumber(1, 16);
     const sign = getRandomSign();
-    const question = `${randomNum1} ${sign} ${randomNum2}`;
+    const question = `${firstNumber} ${sign} ${secondNumber}`;
     let correctAnswer;
     if (sign === '+') {
-      correctAnswer = randomNum1 + randomNum2;
+      correctAnswer = firstNumber + secondNumber;
     } else if (sign === '*') {
-      correctAnswer = (randomNum1 * randomNum2);
+      correctAnswer = (firstNumber * secondNumber);
     } else {
-      correctAnswer = (randomNum1 - randomNum2);
+      correctAnswer = (firstNumber - secondNumber);
     }
-    result[i] = [question, correctAnswer.toString()];
+    result.push([question, correctAnswer.toString()]);
   }
   return result;
 };
 
-const answersAndQuestions = getAnswersAndQuestions();
-export default { description, answersAndQuestions };
+export default { description, getAnswersAndQuestions };
