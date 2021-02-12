@@ -14,7 +14,8 @@ const run = ({ description, getAnswersAndQuestions }) => {
   console.log(`Hello, ${userName}!`);
   console.log(description);
 
-for (const [question, correctAnswer] of getAnswersAndQuestions()) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const [question, correctAnswer] of getAnswersAndQuestions()) {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
