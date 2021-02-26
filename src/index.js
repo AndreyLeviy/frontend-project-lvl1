@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const amountRounds = 3;
+export const roundsCount = 3;
 
 export const getRandomNumber = (min, max) => {
   const minimum = Math.ceil(min);
